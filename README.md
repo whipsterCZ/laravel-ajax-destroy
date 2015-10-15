@@ -1,9 +1,9 @@
 # laravel-ajax-destroy
-Enable calling REST destroy action without creating FORM
+Allows requesting REST `destroy()` action without sending FORM (by clicking on link) 
 
-This is extension for **laravel-ajax** service.
-Action `destroy()` will be called with **AJAX**
-Use have to confirm deletion. Custom message can be provided.
+- This is extension of **https://www.github.com/WhipsterCZ/laravel-ajax** library.
+-  Action `destroy()` will be called with **AJAX**
+-  User have to confirm deletion. Custom message can be provided.
 
 Installation
 ------------
@@ -27,8 +27,8 @@ HTML
 ~~~~~ 
 Laravel action
 ~~~~~ php
-  public function destroy($id)    {
+public function destroy($id)    {
     Model::find($id)->delete();
-	  \Ajax::redirectBack();
-  }
+    \Ajax::redirectBack();
+}
 ~~~~~
