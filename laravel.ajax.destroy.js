@@ -18,7 +18,7 @@ var laravel = (function($, laravel){
                 var data = [
                     {name: '_method', value: 'DELETE'}
                 ];
-                $.ajax({
+                laravel.ajax.send({
                     url: url,
                     type: 'POST',
                     data: data
