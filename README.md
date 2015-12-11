@@ -29,6 +29,6 @@ Laravel action
 ~~~~~ php
 public function destroy($id)    {
     Model::find($id)->delete();
-    \Ajax::redirectBack();
+    return \Ajax::redirectBack();
 }
 ~~~~~
