@@ -1,5 +1,5 @@
 # laravel-ajax-destroy
-Allows requesting REST `destroy()` action without sending FORM (by clicking on link) 
+Allows requesting REST `destroy()` action without sending FORM (by clicking on link)
 
 - This is extension of **https://www.github.com/WhipsterCZ/laravel-ajax** library.
 -  Action `destroy()` will be called with **AJAX**
@@ -7,7 +7,7 @@ Allows requesting REST `destroy()` action without sending FORM (by clicking on l
 
 Installation
 ------------
-1) Install **https://github.com/whipsterCZ/laravel-ajax** 
+1) Install **https://github.com/whipsterCZ/laravel-ajax**
 
 2) Copy source code to your public directory
 
@@ -16,15 +16,21 @@ Installation
 <script src="/js/laravel.ajax.js"></script>
 <script src="/js/laravel.ajax.destroy.js"></script>
 ~~~~~
+or use browserify
+~~~~~ js
+require('laravel-ajax');
+require('laravel-ajax.destroy');
+~~~~~
+
 
 ## Usage
 HTML
 ~~~~~ html
-<a  href="{{ route('model.destroy', $model) }}" 
-    class="destroy" 
+<a  href="{{ route('model.destroy', $model) }}"
+    class="destroy"
     data-confirm="Are you sure?"
 >Delete</a>
-~~~~~ 
+~~~~~
 Laravel action
 ~~~~~ php
 public function destroy($id)    {
